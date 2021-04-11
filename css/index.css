@@ -246,6 +246,13 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 
+/*--副標題--*/
+.subTitle{
+    font-size: 1rem;
+}
+
+
+
 
 /*漸變*/
 .fade-color {
@@ -317,6 +324,12 @@ button:hover .aboutMe_btn_arrow{
 /*-- icon --*/
 .icon_small{
     display:block;
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+.icon_small_inline{
+    display:inline-block;
     height: 1.3rem;
     width: 1.3rem;
 }

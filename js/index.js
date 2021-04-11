@@ -45,13 +45,13 @@ $(document).ready(function () {
 		callbacks: {
 			open: function () {
 				$('nav').css('margin-right', '15px');
-				$("#p-g-flyer").load("./portfolio/graphic-01.html #p-g");
 			},
 			close: function () {
 				$('nav').css('margin-right', '0');
 			}
 		}
 	});
+
 
 
 
