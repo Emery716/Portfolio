@@ -1,3 +1,16 @@
+/*---------------------------
+- 覆蓋BS樣式
+- 覆蓋clipboards
+- 覆蓋pop樣式
+- pop淡入淡出效果
+- 自己的pop樣式
+- 通用
+- home
+- About Me
+- content
+- icon
+----------------------------*/
+
 /*-- 覆蓋BS樣式 --*/
 .navbar-dark .navbar-nav .nav-link {
    color: #d6d6d6;
@@ -113,7 +126,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 
-/*pop淡入淡出效果*/
+/*--pop淡入淡出效果--*/
 .mfp-fade .mfp-container,
 .mfp-fade.mfp-bg {
   opacity: 0;
@@ -146,11 +159,25 @@ a.text-dark:hover, a.text-dark:focus {
     margin: 2% auto;
 }
 
+/*--手機版整體--*/
+@media (max-width: 576px) { 
+    .popup{
+        max-width: 100%;
+        margin: 0;
+    }
+    .mfp-close{
+        background-color: #212121!important;
+        opacity: 1;
+        top:0!important;
+    }
+ }
+
+
+
 /*--pop內容樣式--*/
 .popup_title{
     padding: 0 10%;/*--因為還有media變形，所以不做成通用類別--*/
 }
-
 @media (max-width: 1199.98px) { 
     .popup_title{
         padding: 2%;
@@ -160,7 +187,6 @@ a.text-dark:hover, a.text-dark:focus {
  /*--pop副標題--*/
 .popup_title h3 span{
     font-size:1rem;
-    opacity: .5;
 }
 .popup_title_text{
     font-size:1rem;
@@ -283,8 +309,10 @@ img{
 
 .bgcolor_black{ background-color: #212121; }
 
+.text_opacity_50{ opacity: .5;}
 
-/*-- home --*/
+
+/*-- home --*/  
 
 .home_arrow{
     background-color:#212121;
@@ -299,7 +327,6 @@ img{
 
 
 /*-- About Me --*/
-
 .aboutMe_btn_arrow{
     float: left;
     background-color:#F3F3F3;
@@ -313,11 +340,38 @@ button:hover .aboutMe_btn_arrow{
     min-height: 100%;
 }
 
+/*-- About Me Work --*/ 
+
+.circle_box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+}
+
+.circle_box::after{
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #212121;
+    display: block;
+    position: absolute; 
+    left: 50%;
+    top: 0;
+}
 
 
 
-/*-- content --*/
 
+
+
+/*-- content --*/ 
 .content_height{ height: 500px; }
 
 
@@ -366,3 +420,12 @@ button:hover .aboutMe_btn_arrow{
     mask: url(../img/icon_arrow_down.svg) no-repeat center; 
 }
 
+
+
+
+
+
+/*--測試用，之後刪除--*/
+.bg-pink{
+    background-color: pink;
+}

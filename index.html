@@ -32,13 +32,13 @@
 		<div class="collapse navbar-collapse" id="navbarNav">
 			<ul class="navbar-nav mr-md-auto mt-3 mt-md-0">
 				<li class="nav-item">
-					<a class="nav-link fade-color" href="#portfolio">作品集 Portfolio</a>
+					<a class="nav-link fade-color" href="#portfolio" data-toggle="collapse" data-target="#navbarNav">作品集 Portfolio</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link fade-color" href="#aboutMe">關於我 About Me</a>
+					<a class="nav-link fade-color" href="#aboutMe" data-toggle="collapse" data-target="#navbarNav">關於我 About Me</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link fade-color" href="#contact">與我聯絡 Contact</a>
+					<a class="nav-link fade-color" href="#contact" data-toggle="collapse" data-target="#navbarNav">與我聯絡 Contact</a>
 				</li>
 			</ul>
 			<ul class="navbar-nav flex-row mt-3 mt-md-0">
@@ -47,11 +47,11 @@
 						<span class="icon_small icon_dribbble icon_color_light fade-color"></span>
 					</a>
 				</li>
-				<li class="nav-item pr-3 pr-md-0 mr-md-1">
+				<!-- <li class="nav-item pr-3 pr-md-0 mr-md-1">
 					<a class="nav-link" href="https://www.behance.net/yahanchen" target="_blank">
 						<span class="icon_small icon_behance icon_color_light fade-color"></span>
 					</a>
-				</li>
+				</li> -->
 				<li class="nav-item pr-3 pr-md-0">
 					<a class="nav-link" href="mailto:emeryahan@gmail.com" target="_blank">
 						<span class="icon_small icon_email icon_color_light fade-color"></span>
@@ -84,7 +84,7 @@
 		<span class="anchor" id="portfolio"></span>
 
 		<div class="container-fluid text-center">
-			<h2 class="mb-5">作品集<br/><span class="subTitle">Portfolio</span></h2>
+			<h2 class="mb-5">作品集<br /><span class="subTitle">Portfolio</span></h2>
 			<div class="button-group filters-button-group mb-4">
 				<button class="btn btn-dark active px-3 mx-1" data-filter="*">全部</button>
 				<button class="btn btn-dark px-3 mx-1" data-filter=".graphic">平面設計</button>
@@ -144,7 +144,7 @@
 					<img src="img/gallery/snailhouse/flyer/1.jpg" alt="">
 				</div>
 				<div class="popup_title mb-5 text-center">
-					<h3 class="mb-5">傳單設計<br /><span>Snailhouse Flyer Design</span></h3>
+					<h3 class="mb-5">傳單設計<br /><span class="text_opacity_50">Snailhouse Flyer Design</span></h3>
 					<p class="popup_title_text">
 						由銷售人員直接派發、或是投入信箱、夾在被訂閱報紙內的傳單，因為無法得知閱覽者是否看過，成效要由後續消費者來電詢問、或是上網站加入會員才能反映，上面的內容便尤其重要，除了展現主題的好，還要適時藏起一些資訊，吸引客戶進一步的接觸我們。
 					</p>
@@ -167,7 +167,7 @@
 					<img src="img/gallery/snailhouse/googleBanner/1.jpg" alt="">
 				</div>
 				<div class="popup_title mb-5 text-center">
-					<h3 class="mb-5">Google 廣告作品<br /><span>Google Ads Collection</span></h3>
+					<h3 class="mb-5">Google 廣告作品<br /><span class="text_opacity_50">Google Ads Collection</span></h3>
 					<p class="popup_title_text">
 						Google廣告是網站曝光流量的重要來源，有許多尺寸並遍佈電腦、平板、手機等；製作時除了要清楚傳達主題，製造明顯的Call-to-action吸引人點擊外，還需要根據不同尺寸調整版面與文案，讓廣告在各個載體上都能清楚合適。
 					</p>
@@ -190,8 +190,9 @@
 					<img src="img/gallery/snailhouse/letter/1.jpg" alt="">
 				</div>
 				<div class="popup_title mb-5 text-center">
-					<h3 class="mb-5">開發信設計<br /><span>Snilhouse Flyer Design</span></h3>
-					<p class="popup_title_text">房屋仲介人員與屋主接觸的方法之一，便是對屋主寄送宣傳的信件，稱為開發信，形式上有許多種類，內容根據業務人員的風格與策略而有所不同，除了展現自身優勢，還要積極爭取委託，因為公司的性質與一般仲介公司不同，在製作開發信時會特別呈現這點。	
+					<h3 class="mb-5">開發信設計<br /><span class="text_opacity_50">Snilhouse Flyer Design</span></h3>
+					<p class="popup_title_text">
+						房屋仲介人員與屋主接觸的方法之一，便是對屋主寄送宣傳的信件，稱為開發信，形式上有許多種類，內容根據業務人員的風格與策略而有所不同，除了展現自身優勢，還要積極爭取委託，因為公司的性質與一般仲介公司不同，在製作開發信時會特別呈現這點。
 					</p>
 				</div>
 				<div class="mb-5">
@@ -213,8 +214,9 @@
 					<img src="img/gallery/snailhouse/activity/1.jpg" alt="">
 				</div>
 				<div class="popup_title mb-5 text-center">
-					<h3 class="mb-5">引爆看房新時代<br /><span>Detonating a new era of housing</span></h3>
-					<p class="popup_title_text">一個房屋買賣為主題，面向一般民眾的講座活動，主視覺以房屋買賣相關元素，與爆炸、時空、科技產品結合，運用向量插畫的風格呈現，並以此為主軸衍伸做活動相關用品的設計。	
+					<h3 class="mb-5">引爆看房新時代<br /><span class="text_opacity_50">Detonating a new era of housing</span></h3>
+					<p class="popup_title_text">
+						一個房屋買賣為主題，面向一般民眾的講座活動，主視覺以房屋買賣相關元素，與爆炸、時空、科技產品結合，運用向量插畫的風格呈現，並以此為主軸衍伸做活動相關用品的設計。
 					</p>
 				</div>
 				<div class="mb-5">
@@ -235,8 +237,9 @@
 					<img src="img/gallery/snailhouse/moonFestival/1.jpg" alt="">
 				</div>
 				<div class="popup_title mb-5 text-center">
-					<h3 class="mb-5">中秋禮盒設計<br /><span>Moon Festival Gift Package</span></h3>
-					<p class="popup_title_text">盒面以中秋節應景的事物為主題，運用插畫來呈現一個略為奇幻、色彩繽紛的中秋夜景，外盒採用剪紙藝術的方式，做簡潔的雕花與裝飾，讓整體有更豐富的層次感；內盒則是六種不同的插畫，表現兔子在雲與山間穿梭、若隱若現的模樣。	
+					<h3 class="mb-5">中秋禮盒設計<br /><span class="text_opacity_50">Moon Festival Gift Package</span></h3>
+					<p class="popup_title_text">
+						盒面以中秋節應景的事物為主題，運用插畫來呈現一個略為奇幻、色彩繽紛的中秋夜景，外盒採用剪紙藝術的方式，做簡潔的雕花與裝飾，讓整體有更豐富的層次感；內盒則是六種不同的插畫，表現兔子在雲與山間穿梭、若隱若現的模樣。
 					</p>
 				</div>
 				<div class="mb-5">
@@ -262,15 +265,15 @@
 		<!--錨點偏移-->
 		<span class="anchor" id="aboutMe"></span>
 		<div class="container text-center">
-			<h2 class="mb-5">關於我<br/><span class="subTitle">About Me</sapn>
+			<h2 class="mb-5">關於我<br /><span class="subTitle">About Me</sapn>
 			</h2>
 			<div class="row justify-content-center align-items-center">
 				<div class="col-12 col-md-6 col-xl-4 mb-3 mb-md-0">
-					<img src="img/myphoto.jpg" alt="">
+					<img src="img/myphoto.png" alt="">
 				</div>
 				<div class="col col-md-6 col-xl-6 text-center text-md-left">
 					<h3 class="mb-3">陳雅涵 Emery Chen</h3>
-					<p class="mb-3 h4">黑感原四人政國時神</p>
+					<!-- <p class="mb-3 h4">黑感原四人政國時神</p> -->
 					<p class="mb-3">眼為縣童不黑感原四人！政國時神兩她要分有這視王很而？在完小馬
 						不眼子究內情花。一指開中提們一下臺來爸造；那正紅出了，文常專
 						來示！示多孩，會案由力前國面物兒預為始用，會影增中此共校靜叫
@@ -285,18 +288,23 @@
 
 	<!-- workExperience -->
 	<section class="mb_110">
-		<div class="container text-center">
-			<h2>工作經歷<br/><span class="subTitle">Work Experience</span></h2>
+		<div class="container text-center mb-5">
+			<h2>工作經歷<br /><span class="subTitle">Work Experience</span></h2>
 		</div>
-		<div class="container-fluid bgcolor_light">
-			<div class="container py-5">
-				<div class="row justify-content-center align-items-center">
-					<div class="col-12 col-md-6 col-xl-4 mb-3 mb-md-0">
-						<img src="img/work-snailhouse.jpg" alt="">
+
+		<div class="container-fulid bgcolor_light">
+			<div class="container">
+				<div class="row d-flex align-items-center py-5 py-lg-0">
+					<div class="d-none d-lg-block col-lg-3 text-center text-lg-right mb-3">
+						<p class="h4">xxxx/xx/xx-xxxxx/xx/xx</p>
 					</div>
-					<div class="col col-md-6 col-xl-6 text-center text-md-left">
-						<h3 class="mb-3">大標題</h3>
-						<p class="mb-3 h4">20xx-至今</p>
+					<div class="d-none d-lg-flex col-md-1  col-xl-1 circle_box">
+						<div class="circle bg-dark"></div>
+					</div>
+					<div class="col-12 col-lg-8 text-center text-lg-left">
+						<h3>大標題</h3>
+						<p class="text_opacity_50 mb-3">副標題<span class="d-lg-none"> | xxxx/xx/xx-xxxxx/xx/xx</span></p>
+						
 						<p class="mb-3">眼為縣童不黑感原四人！政國時神兩她要分有這視王很而？在完小馬
 							不眼子究內情花。一指開中提們一下臺來爸造；那正紅出了，文常專
 							來示！示多孩，會案由力前國面物兒預為始用，會影增中此共校靜叫
@@ -305,15 +313,20 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid">
-			<div class="container py-5">
-				<div class="row justify-content-center align-items-center">
-					<div class="col-12 col-md-6 col-xl-4 mb-3 mb-md-0">
-						<img src="img/work-art.jpg" alt="">
+
+		<div class="container-fulid">
+			<div class="container">
+				<div class="row d-flex align-items-center py-5 py-lg-0">
+					<div class="d-none d-lg-block col-lg-3 text-center text-lg-right mb-3">
+						<p class="h4">xxxx/xx/xx-xxxxx/xx/xx</p>
 					</div>
-					<div class="col col-md-6 col-xl-6 text-center text-md-left">
-						<h3 class="mb-3">大標題</h3>
-						<p class="mb-3 h4">一段簡介一段簡介一段簡介</p>
+					<div class="d-none d-lg-flex col-md-1  col-xl-1 circle_box">
+						<div class="circle bg-dark"></div>
+					</div>
+					<div class="col-12 col-lg-8 text-center text-lg-left">
+						<h3>大標題</h3>
+						<p class="text_opacity_50 mb-3">副標題<span class="d-lg-none"> | xxxx/xx/xx-xxxxx/xx/xx</span></p>
+						
 						<p class="mb-3">眼為縣童不黑感原四人！政國時神兩她要分有這視王很而？在完小馬
 							不眼子究內情花。一指開中提們一下臺來爸造；那正紅出了，文常專
 							來示！示多孩，會案由力前國面物兒預為始用，會影增中此共校靜叫
@@ -322,15 +335,20 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid bgcolor_light">
-			<div class="container py-5">
-				<div class="row justify-content-center align-items-center">
-					<div class="col-12 col-md-6 col-xl-4 mb-3 mb-md-0">
-						<img src="img/work-practice.jpg" alt="">
+
+		<div class="container-fulid bgcolor_light">
+			<div class="container">
+				<div class="row d-flex align-items-center py-5 py-lg-0">
+					<div class="d-none d-lg-block col-lg-3 text-center text-lg-right mb-3">
+						<p class="h4">xxxx/xx/xx-xxxxx/xx/xx</p>
 					</div>
-					<div class="col col-md-6 col-xl-6 text-center text-md-left">
-						<h3 class="mb-3">大標題</h3>
-						<p class="mb-3 h4">一段簡介一段簡介一段簡介</p>
+					<div class="d-none d-lg-flex col-md-1  col-xl-1 circle_box">
+						<div class="circle bg-dark"></div>
+					</div>
+					<div class="col-12 col-lg-8 text-center text-lg-left">
+						<h3>大標題</h3>
+						<p class="text_opacity_50 mb-3">副標題<span class="d-lg-none"> | xxxx/xx/xx-xxxxx/xx/xx</span></p>
+						
 						<p class="mb-3">眼為縣童不黑感原四人！政國時神兩她要分有這視王很而？在完小馬
 							不眼子究內情花。一指開中提們一下臺來爸造；那正紅出了，文常專
 							來示！示多孩，會案由力前國面物兒預為始用，會影增中此共校靜叫
@@ -339,12 +357,13 @@
 				</div>
 			</div>
 		</div>
+
 	</section>
 
 	<!--skills-->
 	<section class="mb_110">
 		<div class="container text-center">
-			<h2 class="mb-5">技能<br/><span class="subTitle">Skills</span></h2>
+			<h2 class="mb-5">技能<br /><span class="subTitle">Skills</span></h2>
 			<div class="row">
 				<div class="col-12 col-sm-6 col-lg-3 col-xl-3 mb-5 mb-lg-0">
 					<div class="bgcolor_light py-4 mb-5 mb-lg-0 height_full">
@@ -403,7 +422,7 @@
 		<!--錨點偏移-->
 		<span class="anchor" id="contact"></span>
 		<div class="container text-center">
-			<h2>與我聯絡<br/><span class="subTitle">Content</span></h2>
+			<h2>與我聯絡<br /><span class="subTitle">Content</span></h2>
 		</div>
 		<div class="container-fulid bgcolor_black">
 			<div class="container">
