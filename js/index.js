@@ -19,6 +19,10 @@ window.onload = function () {
 		itemSelector: '.grid_item',
 		layoutMode: 'fitRows'
 	});
+
+
+
+
 	// bind filter button click
 	$('.filters-button-group').on('click', 'button', function () {
 		var filterValue = $(this).attr('data-filter');
