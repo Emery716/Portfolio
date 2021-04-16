@@ -2,8 +2,9 @@
 window.onload
 - Isotope  作品集 篩選與排列效果
 
+popup  作品集 跳出效果，移到外面改用呼叫的
+
 $(document).ready
-- popup  作品集 跳出效果
 --偵測寬度與是否顯示arrow
 
 - clipboards  聯絡我 複製Email到剪貼板
@@ -14,14 +15,12 @@ $(document).ready
 
 window.onload = function () {
 	/*-- Isotope --*/
+	/*--放在onload才不會圖片還沒載入就動作--*/
 	//Isotope init 
 	var $grid = $('.grid').isotope({
 		itemSelector: '.grid_item',
 		layoutMode: 'fitRows'
 	});
-
-
-
 
 	// bind filter button click
 	$('.filters-button-group').on('click', 'button', function () {
@@ -38,15 +37,32 @@ window.onload = function () {
 			$(this).addClass('active');
 		});
 	});
+
+	/*--為了篩選開始--*/
+	var itemReveal = Isotope.Item.prototype.reveal;
+	Isotope.Item.prototype.reveal = function () {
+		itemReveal.apply(this, arguments);
+		$(this.element.children).removeClass('isotope-hidden');
+		popup();
+	};
+
+	var itemHide = Isotope.Item.prototype.hide;
+	Isotope.Item.prototype.hide = function () {
+		itemHide.apply(this, arguments);
+		$(this.element.children).addClass('isotope-hidden');
+		popup();
+	};
+	/*--為了篩選結束--*/
+
 };
 
 
 
 
-$(document).ready(function () {
-
-	/*-- popup --*/
-	$('.popup-link').magnificPopup({
+/*-- popup --*/
+/*--移出來，為了讓他不顯示篩選過後隱藏的作品--*/
+function popup() {
+	$('.popup-link:not(.isotope-hidden)').magnificPopup({
 		type: 'inline',
 		tClose: '關閉',
 		tLoading: 'Loading...',
@@ -80,6 +96,52 @@ $(document).ready(function () {
 			}
 		}
 	});
+}
+
+
+
+
+
+$(document).ready(function () {
+	popup();
+
+	/*-- popup --*/
+	// $('.popup-link:not(.isotope-hidden)').magnificPopup({
+	// 	type: 'inline',
+	// 	tClose: '關閉',
+	// 	tLoading: 'Loading...',
+	// 	mainClass: 'mfp-fade',
+	// 	removalDelay: 300,
+	// 	midClick: true,
+	// 	overflowY: 'scroll',
+	// 	fixedContentPos: true,
+	// 	gallery: {
+	// 		enabled: true, // set to true to enable gallery
+	// 		arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+	// 		tPrev: '上一張', // title for left button
+	// 		tNext: '下一張', // title for right button
+	// 	},
+	// 	callbacks: {
+	// 		open: function () {
+	// 			$('nav').css('margin-right', '15px');
+	// 			/*--讓在popup中按左右按鈕後，頁面滾動到最上面--*/
+	// 			$('.mfp-arrow').on('click', function () {
+	// 				$('.mfp-wrap').scrollTop(0);
+	// 				// 動畫方式不好閱讀
+	// 				// $('.mfp-wrap').animate({ 
+	// 				// 	scrollTop: 0,
+	// 				// }, 800)
+	// 			});
+	// 			changeArrow(checkMediaSm);
+
+	// 		},
+	// 		close: function () {
+	// 			$('nav').css('margin-right', '0');
+	// 		}
+	// 	}
+	// });
+
+
 	/*--偵測寬度與是否顯示arrow--*/
 	function changeArrow(x) {
 		if (x.matches) { // If media query matches

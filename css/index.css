@@ -156,7 +156,7 @@ a.text-dark:hover, a.text-dark:focus {
 /*--整體--*/
 .popup{
     max-width: 80%;
-    margin: 2% auto;
+    margin: 0 auto;
 }
 
 /*--手機版整體--*/
