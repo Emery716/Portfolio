@@ -429,3 +429,18 @@ button:hover .aboutMe_btn_arrow{
 .bg-pink{
     background-color: pink;
 }
+
+
+
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
