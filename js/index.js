@@ -57,8 +57,6 @@ window.onload = function () {
 };
 
 
-
-
 /*-- popup --*/
 /*--移出來，為了讓他不顯示篩選過後隱藏的作品--*/
 function popup() {
@@ -90,6 +88,16 @@ function popup() {
 				});
 				changeArrow(checkMediaSm);
 
+				// /*--點擊作品觸發圖片載入--*/
+				// var myImg = this.content.find("img");
+				// for(let entry of myImg){
+				// 	if(entry.dataset.src){
+				// 	entry.setAttribute('src',entry.dataset.src); // 把值塞回 src
+				// 	entry.removeAttribute('data-src');
+				// 	console.log('ok');
+				// }
+				// }
+
 			},
 			close: function () {
 				$('nav').css('margin-right', '0');
@@ -98,6 +106,17 @@ function popup() {
 	});
 }
 
+/*--偵測寬度與是否顯示arrow--*/
+function changeArrow(x) {
+	if (x.matches) { // If media query matches
+		$('.mfp-arrow').hide();
+	} else {
+		$('.mfp-arrow').show();
+	}
+}
+var checkMediaSm = window.matchMedia("(max-width: 576px)")
+changeArrow(checkMediaSm) // Call listener function at run time
+checkMediaSm.addListener(changeArrow) // Attach listener function on state changes
 
 
 
@@ -142,17 +161,6 @@ $(document).ready(function () {
 	// });
 
 
-	/*--偵測寬度與是否顯示arrow--*/
-	function changeArrow(x) {
-		if (x.matches) { // If media query matches
-			$('.mfp-arrow').hide();
-		} else {
-			$('.mfp-arrow').show();
-		}
-	}
-	var checkMediaSm = window.matchMedia("(max-width: 576px)")
-	changeArrow(checkMediaSm) // Call listener function at run time
-	checkMediaSm.addListener(changeArrow) // Attach listener function on state changes
 
 
 	/*-- clipboards --*/
