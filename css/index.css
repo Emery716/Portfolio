@@ -347,7 +347,7 @@ button:hover .aboutMe_btn_arrow{
     display:flex;
     justify-content: center;
     align-items: center;
-    height: 250px;
+    height: 350px;
 }
 
 .circle{
@@ -367,8 +367,22 @@ button:hover .aboutMe_btn_arrow{
     top: 0;
 }
 
+.line_height_2{
+    line-height: 1.8;
+}
 
 
+.ol_list_none{
+    list-style-type: none;
+}
+
+.padding_zero{
+    padding: 0;
+}
+
+.margin_zero{
+    margin: 0;
+}
 
 
 
@@ -434,10 +448,12 @@ button:hover .aboutMe_btn_arrow{
 
 
 
-.lazyload,
-.lazyloading {
+.lazyload
+.lazyloading{
     opacity: 0;
 }
+
+
 .lazyloaded {
     opacity: 1;
     -webkit-transition: all 0.3s ease-out;
