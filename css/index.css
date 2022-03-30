@@ -4,6 +4,7 @@
 - 覆蓋pop樣式
 - pop淡入淡出效果
 - 自己的pop樣式
+- 自己的Lazyloading轉場效果
 - 通用
 - home
 - About Me
@@ -104,9 +105,6 @@ a.text-dark:hover, a.text-dark:focus {
 .btn-clipboard:hover .content_icon{
     background-color: #E2C14C;
 }
-
-
-
 
 
 /*-- 覆蓋pop樣式 --*/
@@ -258,6 +256,30 @@ a.text-dark:hover, a.text-dark:focus {
 .popup-link:hover .popup_cover {
     opacity: 1;
 }
+
+
+
+
+/*--自己的Lazyloading轉場效果--*/
+/* .lazyloading{
+    opacity: 0;
+} */
+
+
+/* .lazyloaded {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+} */
+
+
+
+
+
+
+
 
 /*-- 通用 --*/
 
@@ -445,19 +467,3 @@ button:hover .aboutMe_btn_arrow{
     background-color: pink;
 }
 
-
-
-
-.lazyload
-.lazyloading{
-    opacity: 0;
-}
-
-
-.lazyloaded {
-    opacity: 1;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}

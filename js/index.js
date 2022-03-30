@@ -13,6 +13,7 @@ $(document).ready
 ----------------------------*/
 
 
+
 window.onload = function () {
 	/*-- Isotope --*/
 	/*--放在onload才不會圖片還沒載入就動作--*/
@@ -55,6 +56,8 @@ window.onload = function () {
 	/*--為了篩選結束--*/
 
 };
+
+
 
 
 /*-- popup --*/
@@ -106,6 +109,9 @@ function popup() {
 	});
 }
 
+
+
+
 /*--偵測寬度與是否顯示arrow--*/
 function changeArrow(x) {
 	if (x.matches) { // If media query matches
@@ -114,14 +120,21 @@ function changeArrow(x) {
 		$('.mfp-arrow').show();
 	}
 }
-var checkMediaSm = window.matchMedia("(max-width: 576px)")
-changeArrow(checkMediaSm) // Call listener function at run time
-checkMediaSm.addListener(changeArrow) // Attach listener function on state changes
+
+var checkMediaSm = window.matchMedia("(max-width: 576px)");
+changeArrow(checkMediaSm); // Call listener function at run time
+checkMediaSm.addListener(changeArrow); // Attach listener function on state changes
 
 
 
 
 $(document).ready(function () {
+	/*--塞loading圖片--*/
+	let lazyImg = document.getElementsByClassName("lazyload");
+	for(let i=0; i < lazyImg.length ; i+=1){
+		lazyImg[i].src="img/loading.gif";
+	}
+
 	popup();
 
 	/*-- popup --*/
@@ -164,7 +177,7 @@ $(document).ready(function () {
 
 
 	/*-- clipboards --*/
-	new ClipboardJS('.btn-clipboard');
+	// new ClipboardJS('.btn-clipboard');
 
 
 	/*-- BS_tooltip --*/
@@ -206,3 +219,7 @@ $(document).ready(function () {
 
 
 });
+
+
+
+
