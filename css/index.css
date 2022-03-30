@@ -408,6 +408,19 @@ button:hover .aboutMe_btn_arrow{
 
 
 
+.width_28rem{
+    width: 28rem;
+}
+
+
+@media (max-width: 448px) { 
+    .width_28rem{
+        width: auto;
+    }
+ }
+
+
+
 /*-- content --*/ 
 .content_height{ height: 500px; }
 
@@ -434,6 +447,11 @@ button:hover .aboutMe_btn_arrow{
 .icon_dribbble{
     -webkit-mask: url(../img/icon_dribbble.svg) no-repeat center;
     mask: url(../img/icon_dribbble.svg) no-repeat center;
+}
+
+.icon_figma{
+    -webkit-mask: url(../img/icon_figma_black.svg) no-repeat center;
+    mask: url(../img/icon_figma_black.svg) no-repeat center;
 }
 
 .icon_behance{
