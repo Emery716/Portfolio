@@ -415,7 +415,7 @@ button:hover .aboutMe_btn_arrow{
 
 @media (max-width: 448px) { 
     .width_28rem{
-        width: auto;
+        width: 100%;
     }
  }
 
