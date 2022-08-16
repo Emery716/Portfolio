@@ -287,7 +287,7 @@ a.text-dark:hover, a.text-dark:focus {
 .anchor {
     display: block;
     position: relative;
-    top: -100px;
+    top: -6.25rem;
     visibility: hidden;
 }
 
@@ -320,12 +320,12 @@ img{
 
 
 .navbar_logo{
-    width: 90px;
+    width: 5.625rem;
     height: auto;
 }
 
 
-.mb_110{ margin-bottom: 110px; }
+.mb_110{ margin-bottom: 6.875rem; }
 
 .bgcolor_light{ background-color: #F3F3F3; }
 
@@ -369,18 +369,18 @@ button:hover .aboutMe_btn_arrow{
     display:flex;
     justify-content: center;
     align-items: center;
-    height: 350px;
+    height: 21.875rem;
 }
 
 .circle{
-    height: 10px;
-    width: 10px;
-    border-radius: 100px;
+    height: 0.625rem;
+    width: 0.625rem;
+    border-radius: 6.25rem;
 }
 
 .circle_box::after{
     content: '';
-    width: 1px;
+    width: 0.0625rem;
     height: 100%;
     background-color: #212121;
     display: block;
@@ -478,6 +478,11 @@ button:hover .aboutMe_btn_arrow{
 
 
 
+::selection {
+	background: #E2C14C;
+}
+
+
 
 
 /*--測試用，之後刪除--*/
@@ -485,3 +490,27 @@ button:hover .aboutMe_btn_arrow{
     background-color: pink;
 }
 
+#header{
+    padding: 5rem;
+}
+
+
+/*---*/
+.welcome-img-wrapper{
+    position: relative;
+    width:  23.75rem;
+    height: 23.75rem;
+    transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    perspective: 400px;
+}
+
+.welcome-img{
+    position: absolute;
+    width:23.75rem;
+    height: 23.75rem;
+    transform:rotateX(0deg)rotateY(0deg);
+    -moz-transform:rotateX(0deg)rotateY(0deg);
+    -webkit-transform:rotateX(0deg)rotateY(0deg);
+}

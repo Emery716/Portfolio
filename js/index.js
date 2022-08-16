@@ -55,6 +55,90 @@ window.onload = function () {
 	};
 	/*--為了篩選結束--*/
 
+
+
+	/*-- 首頁星球隨滑鼠移動果開始 --*/
+	document.addEventListener('mousemove', onMouseMove);
+
+	let mainImg = document.getElementsByClassName('welcomeImg-move');
+
+	var mouseX;
+	var mouseY;
+
+	function onMouseMove(event) {
+
+		var halfWindowWidth = window.innerWidth / 2;
+		mouseX = event.clientX;
+		myRotate = 7;
+
+		mouseROffset = 360 - (mouseX - halfWindowWidth) / (halfWindowWidth / myRotate);
+		mouseLOffset = myRotate - ((mouseX) / (halfWindowWidth / myRotate));
+
+
+		var halfWindowHeight = window.innerHeight / 2;
+		mouseY = event.clientY;
+
+		mouseUpOffset = (mouseY - halfWindowHeight) / (halfWindowHeight / myRotate);
+		mouseDownOffset = (360 - myRotate) + ((mouseY) / (halfWindowHeight / myRotate));
+
+
+		if (mouseX > halfWindowWidth) {
+
+			//mouse in right
+			if (mouseY < halfWindowHeight) {
+				console.log('A');
+				//mouse in up
+				mainImg[0].style.transform = 'rotateY(' + mouseROffset + 'deg)' + ' rotateX(' + mouseUpOffset + 'deg)';
+			} else {
+				//mouse in down
+				mainImg[0].style.transform = 'rotateY(' + mouseROffset + 'deg)' + ' rotateX(' + mouseDownOffset + 'deg)';
+			}
+
+		} else {
+
+			//mouse in left
+			if (mouseY < halfWindowHeight) {
+				//mouse in up
+				mainImg[0].style.transform = 'rotateY(' + mouseLOffset + 'deg)' + ' rotateX(' + mouseUpOffset + 'deg)';
+			} else {
+				//mouse in down
+				mainImg[0].style.transform = 'rotateY(' + mouseLOffset + 'deg)' + ' rotateX(' + mouseDownOffset + 'deg)';
+			}
+
+		}
+
+		// if( mouseX > halfWindowWidth ){
+		// 	//mouse in right
+		// 	mainImg[0].style.transform = 'rotateY(' + mouseROffset + 'deg';
+		// }else{
+		// 	//mouse in left
+		// 	mainImg[0].style.transform = 'rotateY(' + mouseLOffset + 'deg';
+		// }
+
+		// var halfWindowHeight = window.innerHeight/2;
+		// mouseY = event.clientY;
+
+		// mouseUpOffset = ( mouseY - halfWindowHeight ) / ( halfWindowHeight / myRotate );
+		// mouseDownOffset = ( 360 - myRotate ) + ( ( mouseY ) / ( halfWindowHeight / myRotate ) );
+
+		// if( mouseY < halfWindowHeight ){
+		// 	//mouse in up
+		// 	mainImg[0].style.transform = 'rotateX(' + mouseUpOffset + 'deg';
+		// }else{
+		// 	//mouse in down
+		// 	mainImg[0].style.transform = 'rotateX(' + mouseDownOffset + 'deg';
+		// }
+
+
+
+
+
+	}
+
+
+	/*-- 首頁星球隨滑鼠移動果結束 --*/
+
+
 };
 
 
@@ -131,8 +215,8 @@ checkMediaSm.addListener(changeArrow); // Attach listener function on state chan
 $(document).ready(function () {
 	/*--塞loading圖片--*/
 	let lazyImg = document.getElementsByClassName("lazyload");
-	for(let i=0; i < lazyImg.length ; i+=1){
-		lazyImg[i].src="img/loading.gif";
+	for (let i = 0; i < lazyImg.length; i += 1) {
+		lazyImg[i].src = "img/loading.gif";
 	}
 
 	popup();
